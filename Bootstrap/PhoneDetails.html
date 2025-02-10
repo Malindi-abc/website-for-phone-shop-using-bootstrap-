@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAQ - TradeNet Mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TradeNet Mobile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Bundle JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="custom.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="main-heading" style="color: white; font-size: 40px;">
+           <br> WELCOME TO TRADENET MOBILE 
+            <img src="img/tradenet.png" alt="Icon" class="icon-image">
+        </h1> 
+    </div>
+
+    <nav class="navbar navbar-expand-md custom-navbar">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class='nav-link' href="index.html">Home</a></li>
+                <li class="nav-item"><a class='nav-link' href="FAQ.html">FAQ</a></li>
+                <li class="nav-item"><a class='nav-link' href="contactus.html">Contact Us</a></li>
+            </ul>
+            <form class="d-flex ms-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="slider">
+            <img src="img/head1.png" alt="First Image" class="slide-image first-image">
+            <img src="img/head.png" alt="Second Image" class="slide-image second-image">
+        </div>
+        <div class="hero-text">
+            <h1>Sell Old Phones</h1>
+            <h1><center>&</center></h1>
+            <h1>New Phones</h1>
+        </div>
+    </div>
+
+    <!-- Phone Details page Section -->
+    <div class="container mt-4">
+        <h4>Phone Brand : iPhone 12 Pro Max</h4>
+        <p> <strong>Based in 767 Princes Highway Melbourne, VIC 3000, Australia, Tradenet mobile is a close-knit team of experts specialising in direct online sale old and new phones. We meticulously test and ensure device functionality through a rigorous 72-point inspection process. Plus, all devices come with a 12-month warranty and a one-month return policy for added peace of mind.
+        <br>Refurbished – Grade A: This product has been through a careful inspection and testing process and is in excellent A Grade condition, which may have some minor cosmetic blemishes. The product is in full working order and comes in brand new generic packaging with accessories included.</strong></p>
+        <br>
+        <p>Contact Person: <a href="contactus.html">Malindi Maleesha Jayasinghe</a></p>
+
+        <!-- Carousel -->
+        <div id="phoneCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/iphone-12.png" class="d-block w-100" alt="Phone Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/iphone12 (1).png" class="d-block w-100" alt="Phone Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/iphone-12(2).png" class="d-block w-100" alt="Phone Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/iphone12(3).png" class="d-block w-100" alt="Phone Image 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#phoneCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#phoneCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Embedded YouTube Video -->
+        <div class="mt-4">
+            <h3>Phone Review</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oOojVFmm2HU" allowfullscreen></iframe>
+            </div>
+        </div>
+
+               <!-- Register Interest Button -->
+        <button class="btn btn-primary mt-4" data-bs-toggle="collapse" data-bs-target="#interestForm" aria-expanded="false" aria-controls="interestForm">
+            Register Your Interest
+        </button>
+        <br>
+        <br>
+        <br>
+        
+        <!-- Collapse Form -->
+        <div class="collapse mt-3" id="interestForm">
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+               <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+
+        <!-- Hidden Bootstrap Alert -->
+        <div id="thankYouAlert" class="alert alert-success mt-3" style="display: none;">
+            <!-- Message will be populated using jQuery -->
+        </div>
+
+    </div> <!-- Closing container -->
+
+    <footer class="footer mt-4">
+        <div class="container">
+            <p><strong> © 2024 Jayasinghe Arachchige Malindi Maleesha Jayasinghe | Student Number: 12217588</strong></p>
+        </div>
+    </footer>
+
+    <!-- jQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function() {
+            $('#registerForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                var name = $('#name').val(); // Get the value of the Name input
+                var message = "Thanks " + name + ", we will be in contact shortly."; // Create the personalized message
+
+                // Hide the form and submit button
+                $('#registerForm').hide();
+
+                // Set the personalized message in the alert and show the alert
+                $('#thankYouAlert').text(message).show();
+            });
+        });
+    </script>
+</body>
+</html>
